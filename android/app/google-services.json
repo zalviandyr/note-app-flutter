@@ -1,44 +1,27 @@
 {
   "project_info": {
-    "project_number": "1088910936394",
-    "project_id": "note-app-d5a7d",
-    "storage_bucket": "note-app-d5a7d.appspot.com"
+    "project_number": "44291776057",
+    "firebase_url": "https://note-pocket-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "note-pocket",
+    "storage_bucket": "note-pocket.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1088910936394:android:a8f67828080724fb1459b3",
+        "mobilesdk_app_id": "1:44291776057:android:f410c7f10c9a1e0577f7e8",
         "android_client_info": {
-          "package_name": "com.example.note_app"
+          "package_name": "com.note.pocket"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "1088910936394-taj3bf9s1ksb1iov7hvdemi4s64ouv2u.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.note_app",
-            "certificate_hash": "0384f2a4f6bf739705ddc574df9162ca947a49ac"
-          }
-        },
-        {
-          "client_id": "1088910936394-vf9g4norgau6q65083ea68po44525lkv.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB2UCzPDH1vgKprl5dTGZD17iJmGbE6aDY"
+          "current_key": "AIzaSyBTfAnEzW6ki9ke4QLPK-w31cveyJnH6TY"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "1088910936394-vf9g4norgau6q65083ea68po44525lkv.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

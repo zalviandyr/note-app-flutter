@@ -76,7 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       Word.login,
-                      style: Theme.of(context).textTheme.headline1,
+                      style: Theme.of(context).textTheme.displayLarge,
                     ),
                   ),
                   const SizedBox(height: 15.0),
@@ -120,7 +120,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     onPressed: _toRegisterAction,
                     child: Text(
                       Word.registerAppeal,
-                      style: Theme.of(context).textTheme.subtitle2,
+                      style: Theme.of(context).textTheme.titleSmall,
                     ),
                   ),
                 ],

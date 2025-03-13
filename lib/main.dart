@@ -1,12 +1,20 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:note_app/blocs/bloc.dart';
 import 'package:note_app/configs/configs.dart';
+import 'package:note_app/firebase_options.dart';
 import 'package:note_app/ui/screens/screens.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // bloc observer
+  Bloc.observer = AppBlocObserver();
+
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
   runApp(MyApp());
 }
 
@@ -26,46 +34,43 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         themeMode: ThemeMode.dark,
         darkTheme: ThemeData(
-          brightness: Brightness.dark,
           scaffoldBackgroundColor: Pallette.primaryDark,
           primaryColor: Pallette.primaryDark,
           primaryColorLight: Pallette.primaryWhite,
-          accentColor: Pallette.primaryWhite,
-          buttonColor: Pallette.info,
           textTheme: TextTheme(
-            headline1: TextStyle(
+            displayLarge: TextStyle(
               color: Pallette.primaryWhite,
               fontSize: 40.0,
               fontWeight: FontWeight.bold,
             ),
-            headline2: TextStyle(
+            displayMedium: TextStyle(
               color: Pallette.primaryWhite,
               fontSize: 24.0,
               fontWeight: FontWeight.bold,
             ),
-            headline3: TextStyle(
+            displaySmall: TextStyle(
               color: Pallette.primaryDark,
               fontSize: 17.0,
               fontWeight: FontWeight.bold,
             ),
-            headline4: TextStyle(
+            headlineMedium: TextStyle(
               color: Pallette.primaryWhite,
               fontSize: 17.0,
               fontWeight: FontWeight.bold,
             ),
-            bodyText1: TextStyle(
+            bodyLarge: TextStyle(
               color: Pallette.primaryDark,
             ),
-            bodyText2: TextStyle(
+            bodyMedium: TextStyle(
               color: Pallette.primaryWhite,
             ),
-            subtitle1: TextStyle(
+            titleMedium: TextStyle(
               color: Pallette.primaryDark,
             ),
-            subtitle2: TextStyle(
+            titleSmall: TextStyle(
               color: Pallette.danger,
             ),
-            button: TextStyle(
+            labelLarge: TextStyle(
               color: Pallette.primaryWhite,
             ),
           ),
@@ -79,6 +84,10 @@ class MyApp extends StatelessWidget {
               borderRadius: BorderRadius.circular(5.0),
               borderSide: BorderSide.none,
             ),
+          ),
+          colorScheme: ColorScheme.fromSwatch().copyWith(
+            secondary: Pallette.primaryWhite,
+            brightness: Brightness.dark,
           ),
         ),
         home: AnnotatedRegion<SystemUiOverlayStyle>(

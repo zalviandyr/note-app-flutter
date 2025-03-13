@@ -41,7 +41,7 @@ class SplashScreen extends StatelessWidget {
           body: Center(
             child: Text(
               Word.appName,
-              style: Theme.of(context).textTheme.headline1,
+              style: Theme.of(context).textTheme.displayLarge,
             ),
           ),
         );

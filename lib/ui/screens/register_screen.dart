@@ -91,7 +91,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       Word.register,
-                      style: Theme.of(context).textTheme.headline1,
+                      style: Theme.of(context).textTheme.displayLarge,
                     ),
                   ),
                   const SizedBox(height: 15.0),
@@ -153,7 +153,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     onPressed: _toLoginAction,
                     child: Text(
                       Word.loginAppeal,
-                      style: Theme.of(context).textTheme.subtitle2,
+                      style: Theme.of(context).textTheme.titleSmall,
                     ),
                   ),
                 ],

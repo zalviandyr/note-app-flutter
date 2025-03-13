@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/configs/configs.dart';
 
 class SecondaryButton extends StatelessWidget {
   final VoidCallback? onPressed;
@@ -21,7 +20,6 @@ class SecondaryButton extends StatelessWidget {
     return MaterialButton(
       minWidth: 50.0,
       onPressed: isLoading ? () {} : onPressed,
-      color: Theme.of(context).buttonColor,
       padding: const EdgeInsets.all(0.0),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
@@ -31,13 +29,13 @@ class SecondaryButton extends StatelessWidget {
               width: 20.0,
               height: 20.0,
               child: CircularProgressIndicator(
-                color: Theme.of(context).accentColor,
+                color: Theme.of(context).colorScheme.secondary,
               ),
             )
           : Icon(
               icon,
               size: iconSize,
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).colorScheme.secondary,
             ),
     );
   }

@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -78,9 +76,9 @@ class _HomeScreenState extends State<HomeScreen> {
               if (state is NoteFetchSuccess) {
                 return SliverPadding(
                   padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                  sliver: SliverStaggeredGrid.countBuilder(
+                  sliver: SliverMasonryGrid.count(
                     crossAxisCount: 4,
-                    itemCount: state.notes.length + 1,
+                    childCount: state.notes.length + 1,
                     mainAxisSpacing: 7.0,
                     crossAxisSpacing: 7.0,
                     itemBuilder: (context, index) {
@@ -95,10 +93,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       }
 
                       return Text(Word.deleteNoteInfo);
-                    },
-                    staggeredTileBuilder: (index) {
-                      if (index == 0) return StaggeredTile.fit(4);
-                      return StaggeredTile.fit(2);
                     },
                   ),
                 );
@@ -120,7 +114,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _addNoteAction,
-        backgroundColor: Theme.of(context).buttonColor,
         child: Icon(
           Icons.add,
           size: 36.0,

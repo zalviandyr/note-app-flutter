@@ -129,23 +129,24 @@ class _DetailNoteState extends State<DetailNote> {
                           TextFormField(
                             controller: _titleController,
                             maxLines: null,
-                            style: Theme.of(context).textTheme.headline2,
+                            style: Theme.of(context).textTheme.displayMedium,
                             validator: Validation.inputRequired,
                             decoration: InputDecoration(
                               hintText: 'Judul',
-                              hintStyle: Theme.of(context).textTheme.bodyText2,
+                              hintStyle: Theme.of(context).textTheme.bodyMedium,
                               fillColor: Theme.of(context).primaryColor,
                             ),
                           ),
-                          Divider(color: Theme.of(context).accentColor),
+                          Divider(
+                              color: Theme.of(context).colorScheme.secondary),
                           TextFormField(
                             controller: _contentController,
                             maxLines: null,
-                            style: Theme.of(context).textTheme.bodyText2,
+                            style: Theme.of(context).textTheme.bodyMedium,
                             validator: Validation.inputRequired,
                             decoration: InputDecoration(
                               hintText: 'Isi note',
-                              hintStyle: Theme.of(context).textTheme.bodyText2,
+                              hintStyle: Theme.of(context).textTheme.bodyMedium,
                               fillColor: Theme.of(context).primaryColor,
                             ),
                           ),
@@ -162,7 +163,6 @@ class _DetailNoteState extends State<DetailNote> {
           margin: const EdgeInsets.only(bottom: 10.0, left: 10.0, right: 10.0),
           padding: const EdgeInsets.symmetric(vertical: 7.0),
           decoration: BoxDecoration(
-            color: Theme.of(context).buttonColor,
             borderRadius: BorderRadiusDirectional.circular(20.0),
           ),
           child: Text(

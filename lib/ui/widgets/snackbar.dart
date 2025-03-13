@@ -6,7 +6,7 @@ void showErrorSnackbar(BuildContext context, String message) =>
       SnackBar(
         content: Text(
           message,
-          style: Theme.of(context).textTheme.bodyText2,
+          style: Theme.of(context).textTheme.bodyMedium,
         ),
         backgroundColor: Pallette.danger,
         behavior: SnackBarBehavior.floating,
@@ -18,7 +18,7 @@ void showInfoSnackbar(BuildContext context, String message) =>
       SnackBar(
         content: Text(
           message,
-          style: Theme.of(context).textTheme.bodyText2,
+          style: Theme.of(context).textTheme.bodyMedium,
         ),
         backgroundColor: Pallette.info,
         behavior: SnackBarBehavior.floating,

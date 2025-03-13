@@ -19,18 +19,18 @@ class NoteCard extends StatelessWidget {
           backgroundColor: Theme.of(context).primaryColor,
           title: Text(
             Word.deleteNote,
-            style: Theme.of(context).textTheme.headline4,
+            style: Theme.of(context).textTheme.headlineMedium,
           ),
           content: Text(
             Word.deleteNoteConfirm,
-            style: Theme.of(context).textTheme.bodyText2,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
           actions: [
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
               child: Text(
                 Word.no,
-                style: Theme.of(context).textTheme.bodyText2,
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
             ),
             const SizedBox(width: 10.0),
@@ -68,12 +68,12 @@ class NoteCard extends StatelessWidget {
             children: [
               Text(
                 note.title,
-                style: Theme.of(context).textTheme.headline3,
+                style: Theme.of(context).textTheme.displaySmall,
               ),
               const SizedBox(height: 10.0),
               Text(
                 Helper.formatTime(note.dateTime),
-                style: Theme.of(context).textTheme.bodyText1,
+                style: Theme.of(context).textTheme.bodyLarge,
               ),
             ],
           ),

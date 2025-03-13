@@ -17,7 +17,6 @@ class PrimaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       onPressed: isLoading ? () {} : onPressed,
-      color: Theme.of(context).buttonColor,
       minWidth: 250.0,
       height: 36.0,
       child: isLoading
@@ -30,7 +29,7 @@ class PrimaryButton extends StatelessWidget {
             )
           : Text(
               label!,
-              style: Theme.of(context).textTheme.button,
+              style: Theme.of(context).textTheme.labelLarge,
             ),
     );
   }
